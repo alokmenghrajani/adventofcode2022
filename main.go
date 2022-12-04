@@ -7,31 +7,7 @@ import (
 	"github.com/alokmenghrajani/adventofcode2022/day01"
 	"github.com/alokmenghrajani/adventofcode2022/day02"
 	"github.com/alokmenghrajani/adventofcode2022/day03"
-
-	// "github.com/alokmenghrajani/adventofcode2022/day02"
-	// "github.com/alokmenghrajani/adventofcode2022/day03"
-	// "github.com/alokmenghrajani/adventofcode2022/day04"
-	// "github.com/alokmenghrajani/adventofcode2022/day05"
-	// "github.com/alokmenghrajani/adventofcode2022/day06"
-	// "github.com/alokmenghrajani/adventofcode2022/day07"
-	// "github.com/alokmenghrajani/adventofcode2022/day08"
-	// "github.com/alokmenghrajani/adventofcode2022/day09"
-	// "github.com/alokmenghrajani/adventofcode2022/day10"
-	// "github.com/alokmenghrajani/adventofcode2022/day11"
-	// "github.com/alokmenghrajani/adventofcode2022/day12"
-	// "github.com/alokmenghrajani/adventofcode2022/day13"
-	// "github.com/alokmenghrajani/adventofcode2022/day14"
-	// "github.com/alokmenghrajani/adventofcode2022/day15"
-	// "github.com/alokmenghrajani/adventofcode2022/day16"
-	// "github.com/alokmenghrajani/adventofcode2022/day17"
-	// "github.com/alokmenghrajani/adventofcode2022/day18"
-	// "github.com/alokmenghrajani/adventofcode2022/day19"
-	// "github.com/alokmenghrajani/adventofcode2022/day20"
-	// "github.com/alokmenghrajani/adventofcode2022/day21"
-	// "github.com/alokmenghrajani/adventofcode2022/day22"
-	// "github.com/alokmenghrajani/adventofcode2022/day23"
-	// "github.com/alokmenghrajani/adventofcode2022/day24"
-	// "github.com/alokmenghrajani/adventofcode2022/day25"
+	"github.com/alokmenghrajani/adventofcode2022/day04"
 	"github.com/alokmenghrajani/adventofcode2022/utils"
 )
 
@@ -51,9 +27,9 @@ func main() {
 	case 3:
 		fmt.Printf("part 1: %d\n", day03.Part1(utils.Readfile(2022, d)))
 		fmt.Printf("part 2: %d\n", day03.Part2(utils.Readfile(2022, d)))
-	// case 4:
-	// 	fmt.Printf("part 1: %d\n", day04.Part1(utils.Readfile(2022, d)))
-	// 	fmt.Printf("part 2: %d\n", day04.Part2(utils.Readfile(2022, d)))
+	case 4:
+		fmt.Printf("part 1: %d\n", day04.Part1(utils.Readfile(2022, d)))
+		fmt.Printf("part 2: %d\n", day04.Part2(utils.Readfile(2022, d)))
 	// case 5:
 	// 	fmt.Printf("part 1: %d\n", day05.Part1(utils.Readfile(2022, d)))
 	// 	fmt.Printf("part 2: %d\n", day05.Part2(utils.Readfile(2022, d)))
@@ -131,7 +107,7 @@ func main() {
 // Reads day from os.Args.
 func day() int {
 	if len(os.Args) == 1 {
-		return 3
+		return 4
 	}
 	day := utils.Atoi(os.Args[1], -1)
 	return day
