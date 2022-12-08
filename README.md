@@ -1,7 +1,9 @@
 # Advent Of Code 2022
 [Advent Of Code 2022](https://adventofcode.com/2022) solution in [Go](https://golang.org/).
 
-<img src="/tree.svg">
+<img src="tree.svg">
+
+<small>(artwork from https://adventofcode.com/2015)</small>
 
 # Introduction
 Advent of Code is an annual speed programming competition. Unlike several other

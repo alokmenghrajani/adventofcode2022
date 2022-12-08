@@ -4,6 +4,7 @@ import (
 	"strings"
 
 	"github.com/alokmenghrajani/adventofcode2022/utils"
+	"github.com/alokmenghrajani/adventofcode2022/utils/grid2d"
 )
 
 func ToInts(input string, sep string) []int {
@@ -14,4 +15,17 @@ func ToInts(input string, sep string) []int {
 		}
 	}
 	return r
+}
+
+func ToGrid2D[T any](input, rowSep, colSep string, empty T, conv func(string) T) *grid2d.Grid[T] {
+	lines := strings.Split(input, rowSep)
+
+	grid := grid2d.NewGrid(len(lines[0]), len(lines), empty)
+	for y, line := range lines {
+		for x, v := range strings.Split(line, colSep) {
+			grid.Set(x, y, conv(v))
+		}
+	}
+
+	return grid
 }
