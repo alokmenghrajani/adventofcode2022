@@ -1,4 +1,6 @@
 # Advent Of Code 2022
+[![license](http://img.shields.io/badge/license-apache_2.0-blue.svg?style=flat)](https://raw.githubusercontent.com/alokmenghrajani/adventofcode2022/master/LICENSE) [![report](https://goreportcard.com/badge/github.com/alokmenghrajani/adventofcode2022)](https://goreportcard.com/report/github.com/alokmenghrajani/adventofcode2022)
+
 [Advent Of Code 2022](https://adventofcode.com/2022) solution in [Go](https://golang.org/).
 
 <img src="tree.svg">
