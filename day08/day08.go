@@ -79,7 +79,7 @@ func Part2(input string) int {
 	best := 0
 	for j := 0; j < score.SizeY(); j++ {
 		for i := 0; i < score.SizeX(); i++ {
-			best = utils.IntMax(best, score.Get(i, j))
+			best = utils.Max(best, score.Get(i, j))
 		}
 	}
 	return best

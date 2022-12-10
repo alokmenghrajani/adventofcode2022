@@ -9,6 +9,8 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+
+	"golang.org/x/exp/constraints"
 )
 
 func PanicOnErr(err error) {
@@ -20,26 +22,33 @@ func PanicOnErr(err error) {
 const MaxInt = int(^uint(0) >> 1)
 const MinInt = ^MaxInt
 
-func IntMax(a, b int) int {
+func Max[T constraints.Ordered](a, b T) T {
 	if a > b {
 		return a
 	}
 	return b
 }
 
-func IntMin(a, b int) int {
+func Min[T constraints.Ordered](a, b T) T {
 	if a < b {
 		return a
 	}
 	return b
 }
 
-func SliceMinMax(slice []int) (int, int) {
-	min := MaxInt
-	max := MinInt
-	for _, v := range slice {
-		min = IntMin(min, v)
-		max = IntMax(max, v)
+func SliceMinMax[T constraints.Ordered](slice []T) (*T, *T) {
+	if len(slice) == 0 {
+		return nil, nil
+	}
+	min := &slice[0]
+	max := &slice[0]
+	for i, v := range slice {
+		if v < *min {
+			min = &slice[i]
+		}
+		if v > *max {
+			max = &slice[i]
+		}
 	}
 	return min, max
 }
@@ -175,7 +184,7 @@ func Contains(haystack []string, needle string) bool {
 	return false
 }
 
-func Abs(x int) int {
+func Abs[T constraints.Signed](x T) T {
 	if x < 0 {
 		return -x
 	}
@@ -196,7 +205,7 @@ func Gcd(x, y int) int {
 	}
 }
 
-func Sign(x int) int {
+func Sign[T constraints.Signed](x T) int {
 	if x < 0 {
 		return -1
 	} else if x > 0 {
