@@ -63,3 +63,42 @@ func day() int {
 	day := utils.Atoi(os.Args[1], -1)
 	return day
 }
+
+// func genTree() {
+// 	fmt.Println("<pre>")
+// 	n := 30
+// 	for i := 0; i < n; i++ {
+// 		fmt.Printf("%s", strings.Repeat(" ", n-i))
+// 		if i == 0 {
+// 			fmt.Println("<span class=\"s\">*</span>")
+// 			continue
+// 		}
+// 		fmt.Printf("&gt;")
+// 		for j := 0; j < i*2-1; j++ {
+// 			t := rand.Intn(i * 2)
+// 			if t < 5 {
+// 				if rand.Intn(2) == 0 {
+// 					fmt.Printf("<span class=\"c%d\">o</span>", rand.Intn(3))
+// 				} else {
+// 					fmt.Printf("<span class=\"c%d\">O</span>", rand.Intn(3))
+// 				}
+// 			} else if t < 7 {
+// 				fmt.Printf("<span class=\"s\">*</span>")
+// 			} else {
+// 				if rand.Intn(2) == 0 {
+// 					fmt.Printf("&lt;")
+// 				} else {
+// 					fmt.Printf("&gt;")
+// 				}
+// 			}
+// 		}
+// 		fmt.Println("&lt;")
+// 	}
+// 	fmt.Printf("<span class=\"t\">")
+// 	for i := 0; i < 5; i++ {
+// 		fmt.Printf("%s", strings.Repeat(" ", n-1))
+// 		fmt.Println("===")
+// 	}
+// 	fmt.Printf("</span>")
+// 	fmt.Println("</pre>")
+// }

@@ -5,8 +5,6 @@
 
 <img src="tree.svg">
 
-<small>(artwork from https://adventofcode.com/2015)</small>
-
 # Introduction
 Advent of Code is an annual speed programming competition. Unlike several other
 competitions, you only need to submit the solution for one specific input. As a

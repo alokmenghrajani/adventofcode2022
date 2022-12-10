@@ -1,65 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 800 550" width="800" height="550">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 530 650" width="530" height="650">
 	<foreignObject width="100%" height="100%">
 		<div xmlns="http://www.w3.org/1999/xhtml">
-			<style>
-				.calendar .calendar-verycomplete {
-		      color: #009900;
-		    }
-		    .calendar .calendar-day25.calendar-verycomplete{ color: #ffff66; }
-		    .calendar .calendar-day25.calendar-verycomplete{ text-shadow: 0 0 5px #ffff66; }
-		    .calendar .calendar-trunk { color: #cccccc; }
-		    .calendar .calendar-verycomplete .calendar-ornament0 { text-shadow: 0 0 5px #0066ff; animation: anim-ornament 3s infinite;}
-		    .calendar .calendar-verycomplete .calendar-ornament1 { text-shadow: 0 0 5px #ff9900;  animation: anim-ornament 3s infinite 1.2s;}
-		    .calendar .calendar-verycomplete .calendar-ornament2 { text-shadow: 0 0 5px #ff0000; animation: anim-ornament 3s infinite 2.4s;}
-		    .calendar .calendar-verycomplete .calendar-ornament3 { color: #ffff66; text-shadow: 0 0 5px #ffff66}
-		    @keyframes anim-ornament {
-		      0%   { color: #0066ff; }
-		      32% { color: #0066ff; }
+  <style>
+* {
+  font-family: monospace;
+  color: #0f0;
+  text-shadow: 0 0 5px #fff;
+  background-color: #000;
+}
+.s {
+  color: #ff0;
+}
+.c0 {
+  animation: anim 3s infinite;
+}
+.c1 {
+  animation: anim 3s infinite 1.2s;
+}
+.c2 {
+  animation: anim 3s infinite 2.3s;
+}
+@keyframes anim {
+  0%   { color: #f00; }
+  32% { color: #f00; }
 
-		      33% { color: #ff9900; }
-		      65% {color: #ff9900; }
+  33% { color: #f70; }
+  65% {color: #f70; }
 
-		      66% { color: #ff0000;}
-		      100% { color: #ff0000;}
-		    }
-		    .calendar .calendar-lightbeam { visibility: hidden; color: #666666; }
-		    .calendar .calendar-verycomplete .calendar-lightbeam { visibility: visible; }
-		    .calendar .calendar-verycomplete .calendar-lightbeam { color: #ffff66; text-shadow: 0 0 5px #ffff66; }
-			</style>
-			<!-- tree from https://adventofcode.com/2015 -->
-			<div style="background-color: #0f0f23; padding: 2em">
-			<pre class="calendar calendar-perfect"><span class="calendar-day25 calendar-verycomplete">                                                <span class="calendar-lightbeam">|</span>
-			                       <span class="calendar-lightbeam">\</span><span class="calendar-lightbeam">|</span><span class="calendar-lightbeam">/</span>
-			                      <span class="calendar-lightbeam">-</span><span class="calendar-lightbeam">-</span>*<span class="calendar-lightbeam">-</span><span class="calendar-lightbeam">-</span></span>
-			<span class="calendar-verycomplete">                       &gt;<span class="calendar-ornament1">o</span>&lt;                         </span>
-			<span class="calendar-verycomplete">                      &gt;&gt;<span class="calendar-ornament1">o</span>&lt;&lt;                        </span>
-			<span class="calendar-verycomplete">                     &gt;&gt;<span class="calendar-ornament3">*</span>&gt;&gt;<span class="calendar-ornament1">o</span>&lt;                       </span>
-			<span class="calendar-verycomplete">                    &gt;&gt;<span class="calendar-ornament3">*</span>&gt;<span class="calendar-ornament0">O</span>&lt;&lt;&lt;&lt;                      </span>
-			<span class="calendar-verycomplete">                   &gt;&gt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament2">@</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;                     </span>
-			<span class="calendar-verycomplete">                  &gt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament3">*</span>&gt;&gt;<span class="calendar-ornament1">o</span>&gt;&gt;<span class="calendar-ornament2">@</span>&lt;&lt;                    </span>
-			<span class="calendar-verycomplete">                 &gt;<span class="calendar-ornament2">@</span>&lt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;                   </span>
-			<span class="calendar-verycomplete">                &gt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;                  </span>
-			<span class="calendar-verycomplete">               &gt;<span class="calendar-ornament3">*</span>&gt;&gt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament3">*</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament3">*</span>&lt;                 </span>
-			<span class="calendar-verycomplete">              &gt;&gt;<span class="calendar-ornament1">o</span>&lt;&lt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament3">*</span>&gt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;                </span>
-			<span class="calendar-verycomplete">             &gt;&gt;<span class="calendar-ornament3">*</span>&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament3">*</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament3">*</span>&gt;&gt;&gt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;&lt;               </span>
-			<span class="calendar-verycomplete">            &gt;<span class="calendar-ornament1">o</span>&gt;&gt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament0">O</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&lt;              </span>
-			<span class="calendar-verycomplete">           &gt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament2">@</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament2">@</span>&lt;&lt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;             </span>
-			<span class=" calendar-verycomplete">          &gt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament2">@</span>&lt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament3">*</span>&gt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament1">o</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament0">O</span>&lt;            </span>
-			<span class=" calendar-verycomplete">         &gt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament3">*</span>&gt;&gt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament3">*</span>&lt;&lt;           </span>
-			<span class="calendar-verycomplete">        &gt;&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament1">o</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;          </span>
-			<span class="calendar-verycomplete">       &gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament1">o</span>&gt;&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament1">o</span>&lt;         </span>
-			<span class="calendar-verycomplete">      &gt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament0">O</span>&gt;&gt;&gt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament2">@</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&lt;<span class="calendar-ornament1">o</span>&gt;&gt;<span class="calendar-ornament3">*</span>&lt;        </span>
-			<span class="calendar-verycomplete">     &gt;&gt;<span class="calendar-ornament2">@</span>&lt;&lt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament3">*</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&gt;&gt;&gt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament2">@</span>&lt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament3">*</span>&gt;<span class="calendar-ornament2">@</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament1">o</span>&lt;       </span>
-			<span class="calendar-verycomplete">    &gt;&gt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament3">*</span>&gt;<span class="calendar-ornament1">o</span>&lt;&lt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament1">o</span>&gt;&gt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament1">o</span>&lt;      </span>
-			<span class="calendar-verycomplete">   &gt;<span class="calendar-ornament2">@</span>&lt;<span class="calendar-ornament0">O</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&lt;&lt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament0">O</span>&gt;&gt;&gt;<span class="calendar-ornament3">*</span>&lt;     </span>
-			<span class="calendar-verycomplete">  &gt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament0">O</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&lt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament0">O</span>&lt;&lt;    </span>
-			<span class="calendar-verycomplete"> &gt;<span class="calendar-ornament1">o</span>&lt;&lt;&lt;<span class="calendar-ornament2">@</span>&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament0">O</span>&gt;&gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament3">*</span>&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament1">o</span>&gt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament2">@</span>&lt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&gt;<span class="calendar-ornament1">o</span>&lt;&lt;   </span>
-			<span class="calendar-verycomplete">&gt;<span class="calendar-ornament0">O</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament3">*</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&gt;&gt;&gt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament3">*</span>&lt;<span class="calendar-ornament0">O</span>&lt;&lt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament1">o</span>&gt;&gt;&gt;<span class="calendar-ornament2">@</span>&gt;&gt;<span class="calendar-ornament0">O</span>&lt;<span class="calendar-ornament2">@</span>&lt;&lt;&lt;<span class="calendar-ornament3">*</span>&lt;&lt;&lt;  </span>
-			<span class="calendar-trunk">                      |   |
-			                      |   |
-			           _  _ __ ___|___|___ __ _  _</span>
-			</pre>
-			</div>
-		</div>
-	</foreignObject>
+  66% { color: #00f;}
+  100% { color: #00f;}
+}
+.t {
+  color: #a00;
+}
+pre {
+  padding: 2em;
+}
+    </style>
+<pre>
+                              <span class="s">*</span>
+                             &gt;<span class="c2">O</span>&lt;
+                            &gt;<span class="c0">O</span><span class="c1">o</span><span class="c1">o</span>&lt;
+                           &gt;<span class="c1">O</span><span class="c2">O</span><span class="s">*</span><span class="c0">O</span><span class="c0">o</span>&lt;
+                          &gt;<span class="c1">O</span><span class="s">*</span>&gt;<span class="c2">O</span><span class="s">*</span><span class="c1">O</span><span class="s">*</span>&lt;
+                         &gt;<span class="s">*</span><span class="c1">o</span><span class="c0">O</span>&lt;&gt;&gt;&gt;<span class="c2">O</span>&gt;&lt;
+                        &gt;&gt;<span class="s">*</span>&lt;&lt;<span class="s">*</span><span class="c2">O</span>&lt;<span class="c0">o</span><span class="s">*</span><span class="c1">O</span>&gt;&lt;
+                       &gt;<span class="c1">O</span><span class="s">*</span><span class="c2">O</span><span class="c2">o</span>&lt;<span class="s">*</span>&gt;<span class="s">*</span>&gt;<span class="c1">O</span><span class="s">*</span><span class="c2">O</span><span class="c0">O</span>&lt;
+                      &gt;<span class="c1">o</span>&lt;&gt;<span class="c0">O</span><span class="s">*</span>&lt;&gt;<span class="c2">o</span>&gt;<span class="s">*</span><span class="c1">O</span>&gt;<span class="s">*</span>&lt;<span class="c0">O</span>&lt;
+                     &gt;&lt;&lt;<span class="s">*</span><span class="c2">o</span><span class="c1">o</span>&lt;&gt;<span class="c1">o</span><span class="c0">O</span><span class="c0">o</span>&lt;<span class="s">*</span>&lt;&lt;&lt;&lt;&gt;&lt;
+                    &gt;&gt;&gt;<span class="c2">O</span><span class="c0">o</span>&lt;<span class="s">*</span><span class="c0">O</span>&lt;&lt;<span class="c0">o</span>&gt;&lt;<span class="c0">O</span>&lt;&gt;<span class="c1">o</span>&gt;&gt;&gt;&lt;
+                   &gt;&gt;&gt;&lt;<span class="c2">o</span>&lt;&gt;&lt;&gt;&lt;&gt;<span class="c0">O</span>&gt;&gt;<span class="s">*</span><span class="c2">O</span><span class="c2">O</span>&lt;&lt;&gt;&gt;&lt;&lt;
+                  &gt;&gt;&lt;<span class="c1">o</span><span class="c0">o</span>&gt;<span class="s">*</span>&lt;<span class="c1">o</span><span class="s">*</span>&gt;&gt;&gt;&gt;&gt;&gt;<span class="s">*</span><span class="c2">O</span><span class="c2">o</span>&lt;&lt;&gt;&gt;&lt;&lt;
+                 &gt;&lt;&lt;<span class="s">*</span>&lt;&gt;<span class="s">*</span><span class="c0">o</span><span class="c0">O</span><span class="c0">O</span>&gt;&gt;&gt;<span class="c0">O</span>&lt;&gt;<span class="c0">o</span>&gt;&gt;<span class="s">*</span><span class="c1">O</span><span class="c2">O</span>&gt;&lt;<span class="s">*</span>&gt;&lt;
+                &gt;&lt;<span class="s">*</span>&lt;&lt;<span class="c2">o</span>&lt;<span class="c0">O</span>&lt;&lt;&lt;&gt;<span class="s">*</span>&gt;&lt;&gt;<span class="c0">o</span>&gt;&lt;&lt;&lt;&gt;&gt;<span class="c2">o</span>&gt;<span class="s">*</span>&gt;&gt;&lt;
+               &gt;<span class="c0">O</span>&gt;&lt;&gt;&gt;&gt;&lt;<span class="s">*</span><span class="s">*</span>&lt;<span class="c0">o</span>&lt;&lt;<span class="s">*</span>&gt;&gt;&gt;<span class="c1">o</span>&gt;&gt;&lt;<span class="c1">O</span><span class="c1">O</span>&lt;&lt;<span class="c1">o</span>&lt;&gt;<span class="c2">O</span>&lt;
+              &gt;<span class="s">*</span><span class="c1">o</span>&gt;&gt;&lt;<span class="c1">o</span>&lt;<span class="c2">O</span>&lt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&gt;&lt;&lt;&gt;&gt;&gt;<span class="s">*</span>&gt;&gt;&gt;&lt;&gt;&gt;&lt;<span class="c2">o</span>&lt;
+             &gt;&gt;&lt;<span class="c0">O</span>&gt;&lt;&gt;<span class="c2">O</span>&lt;<span class="c2">O</span><span class="c1">O</span><span class="c2">o</span><span class="s">*</span>&gt;&gt;&lt;&gt;&lt;<span class="c2">o</span><span class="c1">o</span>&lt;&lt;&lt;&lt;&gt;<span class="c0">O</span>&gt;&gt;&gt;&lt;&gt;<span class="c1">o</span><span class="s">*</span>&gt;&lt;
+            &gt;&lt;&lt;&gt;&gt;<span class="c2">o</span>&lt;<span class="c1">O</span>&lt;<span class="c0">o</span><span class="c2">o</span>&gt;<span class="c1">O</span>&lt;&lt;&gt;&lt;&lt;&lt;&gt;&lt;&gt;<span class="c2">o</span><span class="c0">O</span><span class="c0">o</span>&lt;&lt;&gt;&gt;&gt;&gt;&gt;<span class="s">*</span>&gt;&gt;&lt;&lt;
+           &gt;&gt;&lt;&gt;&gt;&gt;&lt;&gt;&gt;&lt;&gt;&gt;&gt;&gt;<span class="c2">o</span>&gt;&gt;&gt;&lt;&gt;&lt;<span class="c1">o</span>&lt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;
+          &gt;&lt;&gt;&lt;<span class="c0">O</span>&gt;&gt;&lt;<span class="c1">o</span>&lt;&lt;&gt;&gt;&gt;<span class="s">*</span>&gt;&lt;<span class="c2">o</span>&lt;&lt;&lt;&gt;&lt;<span class="c0">O</span><span class="c0">O</span>&gt;<span class="c0">o</span>&lt;&gt;&lt;&lt;&lt;&gt;&gt;&lt;<span class="c2">O</span>&gt;&lt;&lt;&lt;&lt;
+         &gt;&gt;&gt;&gt;<span class="s">*</span><span class="c2">O</span>&lt;&gt;&gt;<span class="c2">O</span><span class="c0">O</span>&lt;&lt;&gt;&gt;&gt;<span class="s">*</span><span class="c2">O</span>&lt;<span class="c1">O</span>&gt;&lt;&gt;&gt;&gt;&lt;&gt;<span class="c0">o</span>&lt;&gt;&gt;&gt;&lt;<span class="c0">o</span><span class="c0">O</span>&lt;&lt;&lt;<span class="s">*</span>&gt;&lt;&lt;&lt;
+        &gt;&gt;&gt;&lt;&gt;&gt;&gt;<span class="c1">o</span>&lt;&gt;&lt;&gt;&gt;&lt;&lt;&gt;&gt;&gt;&lt;&lt;&gt;<span class="c2">o</span>&lt;&gt;<span class="s">*</span>&lt;&lt;&lt;&gt;<span class="c0">o</span>&lt;&lt;&gt;&gt;&lt;<span class="c1">O</span>&lt;&lt;<span class="c1">o</span>&gt;&lt;&gt;<span class="c1">O</span>&gt;&lt;
+       &gt;&gt;&lt;&gt;&gt;&gt;&lt;&lt;&lt;&gt;&gt;<span class="c1">O</span>&lt;<span class="c0">o</span>&lt;<span class="c1">o</span><span class="c1">O</span>&lt;&gt;&gt;&lt;&gt;&lt;<span class="c2">o</span>&gt;&lt;&gt;&gt;<span class="s">*</span>&lt;&gt;&gt;&gt;&gt;&gt;&gt;<span class="c0">O</span>&gt;&gt;&lt;&gt;&gt;&gt;<span class="s">*</span>&lt;&lt;&lt;
+      &gt;&lt;&lt;&gt;<span class="c2">O</span>&lt;&lt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;&gt;<span class="s">*</span>&gt;<span class="c2">o</span>&lt;<span class="c0">O</span>&lt;&gt;&lt;&lt;&lt;&gt;&gt;&gt;&gt;<span class="s">*</span>&lt;&lt;<span class="c0">o</span>&lt;&gt;&lt;&lt;&lt;&lt;<span class="s">*</span>&gt;&lt;&lt;<span class="c1">O</span><span class="s">*</span>&gt;<span class="c2">o</span>&lt;&lt;
+     &gt;&gt;&gt;&lt;<span class="s">*</span>&lt;&lt;&gt;&gt;&gt;&lt;&gt;&lt;&lt;&lt;&gt;&gt;<span class="c0">O</span><span class="s">*</span>&lt;&lt;&lt;&lt;&gt;<span class="c0">O</span>&gt;&gt;&lt;&gt;&lt;&gt;&gt;<span class="s">*</span>&lt;&gt;&lt;&gt;&gt;&gt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;&gt;&gt;&gt;<span class="c0">O</span>&lt;
+    &gt;&gt;<span class="c0">o</span>&lt;&gt;&lt;<span class="c1">O</span><span class="c1">o</span>&lt;&gt;&gt;&gt;<span class="c0">o</span><span class="c1">o</span>&gt;&gt;&gt;&gt;&gt;&gt;<span class="s">*</span>&lt;&gt;&gt;&gt;&gt;&gt;&lt;&gt;<span class="c2">O</span>&gt;<span class="c2">O</span>&gt;&gt;&lt;<span class="c0">O</span>&gt;&lt;&gt;&lt;&gt;&gt;&lt;<span class="c1">O</span>&lt;&lt;&lt;&lt;&lt;&lt;&gt;&gt;&lt;
+   &gt;&gt;&gt;&gt;&gt;&lt;&gt;<span class="c2">o</span>&lt;&gt;&lt;&lt;&gt;&gt;&lt;&gt;<span class="c2">O</span>&gt;&lt;&lt;&gt;&lt;&lt;&gt;&gt;&lt;&lt;&lt;&lt;&gt;&gt;<span class="s">*</span>&lt;&lt;<span class="c1">O</span><span class="c1">o</span><span class="c1">O</span>&gt;&lt;&gt;&lt;&gt;&lt;&gt;&lt;<span class="c2">o</span><span class="s">*</span>&gt;&gt;&lt;&gt;&gt;&lt;&gt;&lt;
+  &gt;<span class="c1">O</span><span class="s">*</span>&lt;&gt;&gt;&lt;&gt;&gt;&gt;&gt;&gt;&lt;<span class="c1">O</span>&gt;&gt;&lt;&gt;&lt;&gt;&lt;&lt;&gt;&gt;&lt;&lt;&gt;&lt;&gt;&lt;&lt;&gt;&lt;&gt;&lt;&lt;&gt;&lt;&lt;&lt;&gt;<span class="c0">o</span>&lt;<span class="c2">o</span>&gt;<span class="s">*</span>&lt;&gt;&lt;&gt;&gt;&gt;&gt;&lt;&gt;&lt;&lt;
+ &gt;&lt;&gt;&gt;&lt;&gt;&lt;&lt;&gt;&lt;&gt;&lt;<span class="s">*</span><span class="c2">o</span>&gt;&lt;&gt;&gt;<span class="s">*</span>&lt;&lt;<span class="c0">o</span>&lt;&lt;&gt;&gt;&gt;<span class="s">*</span>&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;<span class="s">*</span>&lt;<span class="c2">O</span>&lt;&lt;&lt;<span class="c2">o</span>&gt;&lt;&lt;&gt;&lt;&lt;<span class="c1">o</span>&gt;&gt;&gt;<span class="s">*</span>&lt;&gt;<span class="c1">O</span><span class="c0">o</span>&lt;
+<span class="t">                             ===
+                             ===
+                             ===
+                             ===
+                             ===
+</span></pre>
+	</div></foreignObject>
 </svg>
