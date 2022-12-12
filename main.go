@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
+	"strings"
 
 	"github.com/alokmenghrajani/adventofcode2022/day01"
 	"github.com/alokmenghrajani/adventofcode2022/day02"
@@ -63,6 +65,7 @@ func main() {
 		fmt.Printf("part 1: %d\n", day12.Part1(utils.Readfile(d)))
 		fmt.Printf("part 2: %d\n", day12.Part2(utils.Readfile(d)))
 	default:
+		genTree()
 		panic(fmt.Errorf("no such day: %d", d))
 	}
 }
@@ -76,41 +79,50 @@ func day() int {
 	return day
 }
 
-// func genTree() {
-// 	fmt.Println("<pre>")
-// 	n := 30
-// 	for i := 0; i < n; i++ {
-// 		fmt.Printf("%s", strings.Repeat(" ", n-i))
-// 		if i == 0 {
-// 			fmt.Println("<span class=\"s\">*</span>")
-// 			continue
-// 		}
-// 		fmt.Printf("&gt;")
-// 		for j := 0; j < i*2-1; j++ {
-// 			t := rand.Intn(i * 2)
-// 			if t < 5 {
-// 				if rand.Intn(2) == 0 {
-// 					fmt.Printf("<span class=\"c%d\">o</span>", rand.Intn(3))
-// 				} else {
-// 					fmt.Printf("<span class=\"c%d\">O</span>", rand.Intn(3))
-// 				}
-// 			} else if t < 7 {
-// 				fmt.Printf("<span class=\"s\">*</span>")
-// 			} else {
-// 				if rand.Intn(2) == 0 {
-// 					fmt.Printf("&lt;")
-// 				} else {
-// 					fmt.Printf("&gt;")
-// 				}
-// 			}
-// 		}
-// 		fmt.Println("&lt;")
-// 	}
-// 	fmt.Printf("<span class=\"t\">")
-// 	for i := 0; i < 5; i++ {
-// 		fmt.Printf("%s", strings.Repeat(" ", n-1))
-// 		fmt.Println("===")
-// 	}
-// 	fmt.Printf("</span>")
-// 	fmt.Println("</pre>")
-// }
+func genTree() {
+	fmt.Println("<pre>")
+	n := 30
+	len := -1
+	for i := 0; i < n; i++ {
+		len += 2
+		if i%7 == 6 {
+			len -= 4
+		}
+		fmt.Printf("%s", strings.Repeat(" ", n-len/2+1))
+		if i == 0 {
+			fmt.Println("<span class=\"s\">*</span>")
+			continue
+		}
+		fmt.Printf("/")
+		len2 := len
+		if i%7 == 5 {
+			len2 -= 2
+			fmt.Printf("^")
+		}
+		for j := 0; j < len2-2; j++ {
+			t := rand.Intn(5 * i)
+			if t < i {
+				fmt.Printf("<span class=\"c%d\">•</span>", rand.Intn(3))
+			} else if t < int(1.5*float64(i)) {
+				fmt.Printf("<span class=\"s\">*</span>")
+			} else {
+				if i == n-1 {
+					fmt.Printf("^")
+				} else {
+					fmt.Printf(" ")
+				}
+			}
+		}
+		if i%7 == 5 {
+			fmt.Printf("^")
+		}
+		fmt.Println("\\")
+	}
+	fmt.Printf("<span class=\"t\">")
+	for i := 0; i < 5; i++ {
+		fmt.Printf("%s", strings.Repeat(" ", n-1))
+		fmt.Println("===")
+	}
+	fmt.Printf("</span>")
+	fmt.Println("</pre>")
+}
