@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 530 650" width="530" height="650">
-	<foreignObject width="100%" height="100%">
-		<div xmlns="http://www.w3.org/1999/xhtml">
-  <style>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 600" width="500" height="600">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
 * {
   font-family: monospace;
   color: #0f0;
@@ -36,43 +36,37 @@
 pre {
   padding: 2em;
 }
-    </style>
-<pre>
-                               <span class="s">*</span>
-                              / \
-                             /   \
-                            /<span class="c0">•</span>  <span class="c0">•</span> \
-                           / <span class="c2">•</span>   <span class="s">*</span> \
-                          /^<span class="s">*</span>  <span class="c1">•</span>   ^\
-                           / <span class="c0">•</span><span class="c0">•</span>    \
-                          /<span class="s">*</span> <span class="c0">•</span>      \
-                         / <span class="c1">•</span>  <span class="c0">•</span> <span class="c1">•</span><span class="s">*</span>   \
-                        /    <span class="c2">•</span>   <span class="s">*</span>    \
-                       /   <span class="s">*</span>   <span class="c1">•</span>  <span class="c2">•</span>  <span class="c2">•</span> \
-                      /     <span class="c1">•</span>   <span class="c2">•</span><span class="c2">•</span><span class="c1">•</span>   <span class="c1">•</span> \
-                     /^                <span class="s">*</span>^\
-                      /        <span class="s">*</span>      <span class="c2">•</span> \
-                     /      <span class="c0">•</span><span class="c1">•</span> <span class="s">*</span> <span class="c0">•</span> <span class="c0">•</span><span class="c0">•</span>  <span class="c2">•</span><span class="c2">•</span>\
-                    / <span class="c0">•</span><span class="s">*</span><span class="c1">•</span>  <span class="c2">•</span>  <span class="c1">•</span><span class="c2">•</span>     <span class="s">*</span>    \
-                   /       <span class="c0">•</span>      <span class="s">*</span>  <span class="c0">•</span><span class="s">*</span><span class="c1">•</span><span class="s">*</span>  \
-                  /      <span class="s">*</span>  <span class="c2">•</span> <span class="c0">•</span>  <span class="s">*</span><span class="c2">•</span><span class="s">*</span> <span class="s">*</span>  <span class="c2">•</span>   \
-                 /<span class="c2">•</span>   <span class="c2">•</span>       <span class="c1">•</span> <span class="c0">•</span> <span class="s">*</span><span class="c0">•</span> <span class="c1">•</span><span class="c1">•</span> <span class="c2">•</span><span class="s">*</span> <span class="c1">•</span><span class="s">*</span>\
-                /^<span class="s">*</span>                <span class="c2">•</span>  <span class="c0">•</span>      ^\
-                 /    <span class="s">*</span><span class="c1">•</span> <span class="c0">•</span> <span class="c1">•</span>    <span class="c0">•</span>  <span class="c2">•</span>    <span class="s">*</span> <span class="c2">•</span><span class="c0">•</span> \
-                /<span class="c1">•</span><span class="c2">•</span>  <span class="c0">•</span><span class="c0">•</span> <span class="c0">•</span> <span class="s">*</span>       <span class="c2">•</span>  <span class="c2">•</span><span class="c2">•</span>       \
-               /<span class="c2">•</span><span class="c1">•</span>  <span class="s">*</span>      <span class="c0">•</span>  <span class="s">*</span> <span class="c2">•</span>    <span class="c0">•</span> <span class="s">*</span><span class="c1">•</span> <span class="c1">•</span><span class="s">*</span><span class="s">*</span><span class="c0">•</span> \
-              /<span class="c2">•</span>    <span class="c0">•</span><span class="c0">•</span>   <span class="s">*</span>  <span class="c2">•</span>     <span class="s">*</span><span class="c2">•</span>  <span class="s">*</span> <span class="c2">•</span><span class="s">*</span><span class="s">*</span>     \
-             /             <span class="c0">•</span> <span class="c1">•</span>   <span class="c1">•</span> <span class="c0">•</span><span class="s">*</span><span class="c1">•</span><span class="c0">•</span>  <span class="s">*</span>   <span class="c0">•</span><span class="c2">•</span> <span class="c0">•</span>\
-            /         <span class="c2">•</span>  <span class="s">*</span>  <span class="c2">•</span> <span class="c1">•</span> <span class="c1">•</span>   <span class="c0">•</span>  <span class="c1">•</span>     <span class="c2">•</span>    \
-           /^  <span class="s">*</span>     <span class="c1">•</span>     <span class="c2">•</span><span class="s">*</span><span class="c0">•</span><span class="c1">•</span><span class="s">*</span>   <span class="s">*</span> <span class="c2">•</span>    <span class="s">*</span>  <span class="c2">•</span><span class="s">*</span>  <span class="s">*</span>^\
-            / <span class="s">*</span>    <span class="s">*</span>   <span class="c1">•</span><span class="s">*</span>   <span class="c2">•</span>         <span class="c1">•</span>   <span class="s">*</span>   <span class="c1">•</span><span class="c0">•</span>  \
-           /  <span class="s">*</span>  <span class="c1">•</span>     <span class="s">*</span>          <span class="s">*</span>          <span class="c0">•</span>     \
-          /<span class="c1">•</span><span class="s">*</span>^^<span class="c1">•</span>^^<span class="c1">•</span>^<span class="c1">•</span>^<span class="c0">•</span>^^<span class="s">*</span>^^^<span class="c2">•</span>^^^<span class="s">*</span>^^^<span class="c0">•</span><span class="s">*</span><span class="s">*</span>^^^^^^^^<span class="c0">•</span>^^^\
-<span class="t">                             ===
-                             ===
-                             ===
-                             ===
-                             ===
-</span></pre>
-	</div></foreignObject>
-</svg>
+      </style><pre>
+                            <span class="s">*</span>
+                           / \
+                          / <span class="c1">•</span> \
+                         /    <span class="s">*</span>\
+                        /       \
+                       /^^ <span class="c0">•</span>   ^^\
+                         / <span class="c1">•</span><span class="c1">•</span><span class="s">*</span> \
+                        / <span class="c2">•</span> <span class="c0">•</span>   \
+                       /<span class="c1">•</span><span class="s">*</span>  <span class="s">*</span><span class="c2">•</span>   \
+                      /<span class="c1">•</span>  <span class="c1">•</span>      <span class="c0">•</span>\
+                     /<span class="c1">•</span>   <span class="c1">•</span>  <span class="c1">•</span>    <span class="s">*</span>\
+                    /  <span class="s">*</span><span class="c0">•</span> <span class="c1">•</span>  <span class="c2">•</span>    <span class="s">*</span> \
+                   /^^<span class="c1">•</span>         <span class="s">*</span><span class="s">*</span><span class="s">*</span>^^\
+                     /     <span class="c0">•</span><span class="s">*</span> <span class="c2">•</span><span class="c2">•</span><span class="c1">•</span>  \
+                    / <span class="s">*</span>    <span class="c2">•</span>        \
+                   /   <span class="c2">•</span>         <span class="c0">•</span>   \
+                  /       <span class="c1">•</span>  <span class="c2">•</span> <span class="s">*</span> <span class="s">*</span>  <span class="c1">•</span> \
+                 /<span class="c2">•</span>   <span class="c2">•</span>  <span class="c2">•</span><span class="c2">•</span>  <span class="s">*</span> <span class="s">*</span><span class="c0">•</span>   <span class="c1">•</span> <span class="c2">•</span>\
+                /<span class="c1">•</span>          <span class="c2">•</span> <span class="c2">•</span> <span class="c2">•</span>    <span class="c2">•</span><span class="s">*</span><span class="c1">•</span>\
+               /^^<span class="c1">•</span>      <span class="c1">•</span> <span class="c1">•</span> <span class="c1">•</span>  <span class="c2">•</span>   <span class="c1">•</span> <span class="s">*</span>^^\
+                 /<span class="c0">•</span>  <span class="c2">•</span>   <span class="s">*</span>    <span class="c0">•</span>     <span class="c0">•</span>  \
+                /<span class="c1">•</span>   <span class="s">*</span>           <span class="c0">•</span> <span class="c0">•</span><span class="s">*</span><span class="c0">•</span>  \
+               /   <span class="s">*</span> <span class="s">*</span> <span class="c2">•</span><span class="c0">•</span>  <span class="c2">•</span><span class="c2">•</span> <span class="c2">•</span><span class="s">*</span><span class="s">*</span>     <span class="s">*</span><span class="c1">•</span> \
+              /               <span class="c0">•</span><span class="c0">•</span> <span class="c0">•</span><span class="c1">•</span><span class="c2">•</span>  <span class="c2">•</span>   \
+             /           <span class="s">*</span> <span class="c2">•</span>         <span class="c1">•</span><span class="c1">•</span>  <span class="c1">•</span> \
+            / <span class="c2">•</span><span class="c2">•</span>    <span class="c2">•</span>          <span class="c1">•</span> <span class="c1">•</span>          \
+           /^^^^<span class="s">*</span>^^^^^<span class="c1">•</span><span class="c1">•</span>^^<span class="c2">•</span>^^<span class="c0">•</span>^^<span class="c0">•</span>^^<span class="c2">•</span><span class="c2">•</span><span class="c0">•</span><span class="s">*</span><span class="c1">•</span><span class="c1">•</span>^^^^\
+<span class="t">                           ===
+                           ===
+                           ===
+                           ===
+                           ===
+</span></pre></div></foreignObject></svg>

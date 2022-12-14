@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"strings"
+	"time"
 
 	"github.com/alokmenghrajani/adventofcode2022/day01"
 	"github.com/alokmenghrajani/adventofcode2022/day02"
@@ -88,49 +89,91 @@ func day() int {
 }
 
 func genTree() {
-	fmt.Println("<pre>")
-	n := 30
+	rand.Seed(time.Now().Unix())
+	f, err := os.Create("tree.svg")
+	utils.PanicOnErr(err)
+	defer f.Close()
+	fmt.Fprintln(f, `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 600" width="500" height="600">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+* {
+  font-family: monospace;
+  color: #0f0;
+  text-shadow: 0 0 5px #fff;
+  background-color: #000;
+}
+.s {
+  color: #ff0;
+}
+.c0 {
+  animation: anim 3s infinite;
+}
+.c1 {
+  animation: anim 3s infinite 1.2s;
+}
+.c2 {
+  animation: anim 3s infinite 2.3s;
+}
+@keyframes anim {
+  0%   { color: #f00; }
+  32% { color: #f00; }
+
+  33% { color: #f70; }
+  65% {color: #f70; }
+
+  66% { color: #00f;}
+  100% { color: #00f;}
+}
+.t {
+  color: #a00;
+}
+pre {
+  padding: 2em;
+}
+      </style><pre>`)
+	n := 27
 	len := -1
 	for i := 0; i < n; i++ {
 		len += 2
 		if i%7 == 6 {
-			len -= 4
+			len -= 6
 		}
-		fmt.Printf("%s", strings.Repeat(" ", n-len/2+1))
+		fmt.Fprintf(f, "%s", strings.Repeat(" ", n-len/2+1))
 		if i == 0 {
-			fmt.Println("<span class=\"s\">*</span>")
+			fmt.Fprintln(f, "<span class=\"s\">*</span>")
 			continue
 		}
-		fmt.Printf("/")
+		fmt.Fprintf(f, "/")
 		len2 := len
 		if i%7 == 5 {
-			len2 -= 2
-			fmt.Printf("^")
+			len2 -= 4
+			fmt.Fprintf(f, "^^")
 		}
 		for j := 0; j < len2-2; j++ {
 			t := rand.Intn(5 * i)
 			if t < i {
-				fmt.Printf("<span class=\"c%d\">•</span>", rand.Intn(3))
+				fmt.Fprintf(f, "<span class=\"c%d\">•</span>", rand.Intn(3))
 			} else if t < int(1.5*float64(i)) {
-				fmt.Printf("<span class=\"s\">*</span>")
+				fmt.Fprintf(f, "<span class=\"s\">*</span>")
 			} else {
 				if i == n-1 {
-					fmt.Printf("^")
+					fmt.Fprintf(f, "^")
 				} else {
-					fmt.Printf(" ")
+					fmt.Fprintf(f, " ")
 				}
 			}
 		}
 		if i%7 == 5 {
-			fmt.Printf("^")
+			fmt.Fprintf(f, "^^")
 		}
-		fmt.Println("\\")
+		fmt.Fprintln(f, "\\")
 	}
-	fmt.Printf("<span class=\"t\">")
+	fmt.Fprintf(f, "<span class=\"t\">")
 	for i := 0; i < 5; i++ {
-		fmt.Printf("%s", strings.Repeat(" ", n-1))
-		fmt.Println("===")
+		fmt.Fprintf(f, "%s", strings.Repeat(" ", n))
+		fmt.Fprintln(f, "===")
 	}
-	fmt.Printf("</span>")
-	fmt.Println("</pre>")
+	fmt.Fprintf(f, "</span>")
+	fmt.Fprintln(f, "</pre></div></foreignObject></svg>")
 }
