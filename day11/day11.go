@@ -82,6 +82,8 @@ func common(input string, div *big.Int, rounds int) int {
 	}
 
 	// compute common divisor to optimize computation for part 2
+	// note: all the monkey.test are prime numbers, I should have simply
+	// multiplied all the values together.
 	commonDivisor := big.NewInt(1)
 	for _, monkey := range monkeys {
 		t := &big.Int{}
