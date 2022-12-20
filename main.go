@@ -25,6 +25,7 @@ import (
 	"github.com/alokmenghrajani/adventofcode2022/day16"
 	"github.com/alokmenghrajani/adventofcode2022/day17"
 	"github.com/alokmenghrajani/adventofcode2022/day18"
+	"github.com/alokmenghrajani/adventofcode2022/day19"
 	"github.com/alokmenghrajani/adventofcode2022/day20"
 	"github.com/alokmenghrajani/adventofcode2022/utils"
 )
@@ -90,6 +91,9 @@ func main() {
 	case 18:
 		fmt.Printf("part 1: %d\n", day18.Part1(utils.Readfile(d)))
 		fmt.Printf("part 2: %d\n", day18.Part2(utils.Readfile(d)))
+	case 19:
+		fmt.Printf("part 1: %d\n", day19.Part1(utils.Readfile(d)))
+		fmt.Printf("part 2: %d\n", day19.Part2(utils.Readfile(d)))
 	case 20:
 		fmt.Printf("part 1: %d\n", day20.Part1(utils.Readfile(d)))
 		fmt.Printf("part 2: %d\n", day20.Part2(utils.Readfile(d)))
@@ -102,7 +106,7 @@ func main() {
 // Reads day from os.Args.
 func day() int {
 	if len(os.Args) == 1 {
-		return 20
+		return 19
 	}
 	day := utils.Atoi(os.Args[1], -1)
 	return day
