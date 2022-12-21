@@ -27,6 +27,7 @@ import (
 	"github.com/alokmenghrajani/adventofcode2022/day18"
 	"github.com/alokmenghrajani/adventofcode2022/day19"
 	"github.com/alokmenghrajani/adventofcode2022/day20"
+	"github.com/alokmenghrajani/adventofcode2022/day21"
 	"github.com/alokmenghrajani/adventofcode2022/utils"
 )
 
@@ -97,6 +98,9 @@ func main() {
 	case 20:
 		fmt.Printf("part 1: %d\n", day20.Part1(utils.Readfile(d)))
 		fmt.Printf("part 2: %d\n", day20.Part2(utils.Readfile(d)))
+	case 21:
+		fmt.Printf("part 1: %d\n", day21.Part1(utils.Readfile(d)))
+		fmt.Printf("part 2: %s\n", day21.Part2(utils.Readfile(d)))
 	default:
 		genTree()
 		panic(fmt.Errorf("no such day: %d", d))
@@ -106,7 +110,7 @@ func main() {
 // Reads day from os.Args.
 func day() int {
 	if len(os.Args) == 1 {
-		return 19
+		return 21
 	}
 	day := utils.Atoi(os.Args[1], -1)
 	return day
