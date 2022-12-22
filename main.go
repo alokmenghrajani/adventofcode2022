@@ -102,15 +102,23 @@ func main() {
 		fmt.Printf("part 1: %d\n", day21.Part1(utils.Readfile(d)))
 		fmt.Printf("part 2: %s\n", day21.Part2(utils.Readfile(d)))
 	default:
-		genTree()
 		panic(fmt.Errorf("no such day: %d", d))
 	}
 }
 
 // Reads day from os.Args.
 func day() int {
+	latest := 21
 	if len(os.Args) == 1 {
-		return 21
+		return latest
+	}
+	if os.Args[1] == "tree" {
+		genTree()
+		os.Exit(0)
+	}
+	if os.Args[1] == "next" {
+		genNext(latest + 1)
+		os.Exit(0)
 	}
 	day := utils.MustAtoi(os.Args[1])
 	return day
@@ -204,4 +212,47 @@ pre {
 	}
 	fmt.Fprintf(f, "</span>")
 	fmt.Fprintln(f, "</pre></div></foreignObject></svg>")
+	fmt.Printf("wrote tree.svg")
+}
+
+func genNext(n int) {
+	os.Mkdir(fmt.Sprintf("day%02d", n), 0755)
+	f, err := os.Create(fmt.Sprintf("day%02d/day%02d.go", n, n))
+	utils.PanicOnErr(err)
+	defer f.Close()
+	f.WriteString(fmt.Sprintf(`package day%02d
+
+func Part1(input string) int {
+	return 0
+}
+
+func Part2(input string) int {
+	return 0
+}
+`, n))
+	fmt.Printf("wrote day%02d/day%02d.go\n", n, n)
+
+	f, err = os.Create(fmt.Sprintf("day%02d/day%02d_test.go", n, n))
+	utils.PanicOnErr(err)
+	defer f.Close()
+	f.WriteString(fmt.Sprintf(`package day%02d
+
+import (
+	"testing"
+
+	"github.com/stretchr/testify/require"
+)
+
+func TestPart1(t *testing.T) {
+	r := Part1("")
+	require.Equal(t, 0, r)
+}
+
+func TestPart2(t *testing.T) {
+	r := Part2("")
+	require.Equal(t, 0, r)
+}
+`, n))
+	fmt.Printf("wrote day%02d/day%02d_test.go\n", n, n)
+
 }
