@@ -112,7 +112,7 @@ func day() int {
 	if len(os.Args) == 1 {
 		return 21
 	}
-	day := utils.Atoi(os.Args[1], -1)
+	day := utils.MustAtoi(os.Args[1])
 	return day
 }
 

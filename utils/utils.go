@@ -53,15 +53,6 @@ func SliceMinMax[T constraints.Ordered](slice []T) (*T, *T) {
 	return min, max
 }
 
-// Like strconv.Atoi but returns a default value on error
-func Atoi(s string, fallback int) int {
-	v, err := strconv.Atoi(s)
-	if err != nil {
-		return fallback
-	}
-	return v
-}
-
 func MustAtoi(s string) int {
 	v, err := strconv.Atoi(s)
 	PanicOnErr(err)
