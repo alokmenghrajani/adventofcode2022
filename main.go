@@ -31,6 +31,7 @@ import (
 	"github.com/alokmenghrajani/adventofcode2022/day22"
 	"github.com/alokmenghrajani/adventofcode2022/day23"
 	"github.com/alokmenghrajani/adventofcode2022/day24"
+	"github.com/alokmenghrajani/adventofcode2022/day25"
 	"github.com/alokmenghrajani/adventofcode2022/utils"
 )
 
@@ -113,6 +114,8 @@ func main() {
 	case 24:
 		fmt.Printf("part 1: %d\n", day24.Part1(utils.Readfile(d)))
 		fmt.Printf("part 2: %d\n", day24.Part2(utils.Readfile(d)))
+	case 25:
+		fmt.Printf("part 1: %s\n", day25.Part1(utils.Readfile(d)))
 	default:
 		panic(fmt.Errorf("no such day: %d", d))
 	}
@@ -120,7 +123,7 @@ func main() {
 
 // Reads day from os.Args.
 func day() int {
-	latest := 24
+	latest := 25
 	if len(os.Args) == 1 {
 		return latest
 	}
